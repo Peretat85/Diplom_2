@@ -7,8 +7,8 @@ import allure
 
 @pytest.fixture(scope="function")
 def api_client():
-    """Фикстура для создания экземпляра ApiClient."""
-    return APIClient()
+    """Фикстура для создания экземпляра ApiClient, чтобы не прописывать в каждом тесте"""
+    return APIClient(curl.main_site)
 
 @pytest.fixture(scope="function")
 def new_user_data(api_client):
