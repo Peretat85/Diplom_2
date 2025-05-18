@@ -95,7 +95,7 @@ class TestUserUpdate:
         # 1. регистрируем первого пользователя (без фикстуры)
         register_response_2 = api_client.register_user(new_user_data["email"], new_user_data["password"],
                                                        new_user_data["name"])
-        print(register_response_2)
+
         new_email = register_response_2["email"]
 
         # 2. меняем второму пользователю почту на почту первого пользователя
